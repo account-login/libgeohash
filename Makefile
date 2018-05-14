@@ -3,12 +3,12 @@
 all: library test
 
 library:
-	gcc -c geohash.c -o geohash.o
+	gcc -Wall -Wextra -c geohash.c -o geohash.o
 	ar rcs libgeohash.a geohash.o
 	rm geohash.o
 	
 test:
-	gcc geohash_test.c geohash.c 	
+	gcc -Wall -Wextra geohash_test.c geohash.c
 	./a.out
 	rm a.out
 	

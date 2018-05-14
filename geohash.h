@@ -28,6 +28,10 @@
  *  OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // Metric in meters
 typedef struct GeoBoxDimensionStruct {
 	
@@ -75,3 +79,8 @@ extern char** geohash_neighbors(char* hash);
  * Returns the width and height of a precision value.
  */
 extern GeoBoxDimension geohash_dimensions_for_precision(int precision);
+
+
+#ifdef __cplusplus
+}
+#endif
